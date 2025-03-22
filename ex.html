@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #e3f2fd;
+            /* Soft light blue background */
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .hair-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .hair-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            padding: 25px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hair-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hair-photo {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        .Hair-name {
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, #ff6347, #ffcc00);
+            /* Gradient color for names */
+            -webkit-background-clip: text;
+            color: transparent;
+            margin: 10px 0;
+        }
+        
+        .select-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            /* Highlighted button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .select-btn:hover {
+            background-color: #ff4500;
+            /* Darker shade on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>MentorConnect</h1>
+
+    <div class="hair-list">
+        <!-- Existing Mentor Cards -->
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="John Doe">
+            <div class="mentor-name">John Doe</div>
+            <button class="select-btn" onclick="selectHair('John Doe')">Select</button>
+        </div>
+
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Jane Smith">
+            <div class="hair-name">Jane Smith</div>
+            <button class="select-btn" onclick="selectHair('Jane Smith')">Select</button>
+        </div>
+
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+        <div class="hair-card">
+            <img class="hair-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="hair-name">Alice Johnson</div>
+            <button class="select-btn" onclick="selectHair('Alice Johnson')">Select</button>
+        </div>
+
+    </div>
+
+    <script>
+        function selectMentor(mentorName) {
+            localStorage.setItem('selectedHair', HairName);
+            window.location.href = 'schedule.html';
+        }
+    </script>
+
+</body>
+
+</html>

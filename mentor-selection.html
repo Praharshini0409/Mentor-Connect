@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #e3f2fd;
+            /* Soft light blue background */
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .mentor-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .mentor-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            padding: 25px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .mentor-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mentor-photo {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        .mentor-name {
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, #ff6347, #ffcc00);
+            /* Gradient color for names */
+            -webkit-background-clip: text;
+            color: transparent;
+            margin: 10px 0;
+        }
+        
+        .mentor-speciality {
+            font-size: 1.1rem;
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+        
+        .mentor-company {
+            font-size: 1rem;
+            color: #2c3e50;
+            font-weight: bold;
+            /* Bold and emphasized company name */
+        }
+        
+        .mentor-experience {
+            font-size: 0.9rem;
+            color: #555;
+            margin: 5px 0;
+        }
+        
+        .select-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            /* Highlighted button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .select-btn:hover {
+            background-color: #ff4500;
+            /* Darker shade on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>MentorConnect</h1>
+
+    <div class="mentor-list">
+        <!-- Existing Mentor Cards -->
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="John Doe">
+            <div class="mentor-name">John Doe</div>
+            <div class="mentor-speciality">AI Specialist</div>
+            <div class="mentor-company">Google</div>
+            <div class="mentor-experience">Experience: 10 years</div>
+            <button class="select-btn" onclick="selectMentor('John Doe')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Jane Smith">
+            <div class="mentor-name">Jane Smith</div>
+            <div class="mentor-speciality">Web Developer</div>
+            <div class="mentor-company">Amazon</div>
+            <div class="mentor-experience">Experience: 8 years</div>
+            <button class="select-btn" onclick="selectMentor('Jane Smith')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Alice Johnson">
+            <div class="mentor-name">Alice Johnson</div>
+            <div class="mentor-speciality">Data Scientist</div>
+            <div class="mentor-company">Microsoft</div>
+            <div class="mentor-experience">Experience: 7 years</div>
+            <button class="select-btn" onclick="selectMentor('Alice Johnson')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Michael Brown">
+            <div class="mentor-name">Michael Brown</div>
+            <div class="mentor-speciality">Machine Learning Expert</div>
+            <div class="mentor-company">NVIDIA</div>
+            <div class="mentor-experience">Experience: 9 years</div>
+            <button class="select-btn" onclick="selectMentor('Michael Brown')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Emma Davis">
+            <div class="mentor-name">Emma Davis</div>
+            <div class="mentor-speciality">Cloud Engineer</div>
+            <div class="mentor-company">IBM</div>
+            <div class="mentor-experience">Experience: 5 years</div>
+            <button class="select-btn" onclick="selectMentor('Emma Davis')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Robert Wilson">
+            <div class="mentor-name">Robert Wilson</div>
+            <div class="mentor-speciality">Full-Stack Developer</div>
+            <div class="mentor-company">Facebook</div>
+            <div class="mentor-experience">Experience: 6 years</div>
+            <button class="select-btn" onclick="selectMentor('Robert Wilson')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Olivia Thomas">
+            <div class="mentor-name">Olivia Thomas</div>
+            <div class="mentor-speciality">Cybersecurity Specialist</div>
+            <div class="mentor-company">Cisco</div>
+            <div class="mentor-experience">Experience: 7 years</div>
+            <button class="select-btn" onclick="selectMentor('Olivia Thomas')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="William Harris">
+            <div class="mentor-name">William Harris</div>
+            <div class="mentor-speciality">Blockchain Developer</div>
+            <div class="mentor-company">Chainlink</div>
+            <div class="mentor-experience">Experience: 5 years</div>
+            <button class="select-btn" onclick="selectMentor('William Harris')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Sophia Lee">
+            <div class="mentor-name">Sophia Lee</div>
+            <div class="mentor-speciality">DevOps Engineer</div>
+            <div class="mentor-company">Spotify</div>
+            <div class="mentor-experience">Experience: 6 years</div>
+            <button class="select-btn" onclick="selectMentor('Sophia Lee')">Select</button>
+        </div>
+
+        <!-- Additional Mentor Cards -->
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="James Clark">
+            <div class="mentor-name">James Clark</div>
+            <div class="mentor-speciality">UI/UX Designer</div>
+            <div class="mentor-company">Adobe</div>
+            <div class="mentor-experience">Experience: 4 years</div>
+            <button class="select-btn" onclick="selectMentor('James Clark')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Liam Walker">
+            <div class="mentor-name">Liam Walker</div>
+            <div class="mentor-speciality">Game Developer</div>
+            <div class="mentor-company">Epic Games</div>
+            <div class="mentor-experience">Experience: 5 years</div>
+            <button class="select-btn" onclick="selectMentor('Liam Walker')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Mia Hall">
+            <div class="mentor-name">Mia Hall</div>
+            <div class="mentor-speciality">Frontend Developer</div>
+            <div class="mentor-company">Netflix</div>
+            <div class="mentor-experience">Experience: 3 years</div>
+            <button class="select-btn" onclick="selectMentor('Mia Hall')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Ethan Young">
+            <div class="mentor-name">Ethan Young</div>
+            <div class="mentor-speciality">Data Analyst</div>
+            <div class="mentor-company">LinkedIn</div>
+            <div class="mentor-experience">Experience: 6 years</div>
+            <button class="select-btn" onclick="selectMentor('Ethan Young')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Ava Hernandez">
+            <div class="mentor-name">Ava Hernandez</div>
+            <div class="mentor-speciality">Software Engineer</div>
+            <div class="mentor-company">Twitter</div>
+            <div class="mentor-experience">Experience: 4 years</div>
+            <button class="select-btn" onclick="selectMentor('Ava Hernandez')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Isabella Martin">
+            <div class="mentor-name">Isabella Martin</div>
+            <div class="mentor-speciality">Mobile App Developer</div>
+            <div class="mentor-company">Pinterest</div>
+            <div class="mentor-experience">Experience: 2 years</div>
+            <button class="select-btn" onclick="selectMentor('Isabella Martin')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Logan Thompson">
+            <div class="mentor-name">Logan Thompson</div>
+            <div class="mentor-speciality">Network Engineer</div>
+            <div class="mentor-company">Cisco</div>
+            <div class="mentor-experience">Experience: 7 years</div>
+            <button class="select-btn" onclick="selectMentor('Logan Thompson')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Charlotte Lee">
+            <div class="mentor-name">Charlotte Lee</div>
+            <div class="mentor-speciality">Product Manager</div>
+            <div class="mentor-company">Slack</div>
+            <div class="mentor-experience">Experience: 5 years</div>
+            <button class="select-btn" onclick="selectMentor('Charlotte Lee')">Select</button>
+        </div>
+
+        <div class="mentor-card">
+            <img class="mentor-photo" src="https://via.placeholder.com/100" alt="Henry King">
+            <div class="mentor-name">Henry King</div>
+            <div class="mentor-speciality">SEO Specialist</div>
+            <div class="mentor-company">Shopify</div>
+            <div class="mentor-experience">Experience: 3 years</div>
+            <button class="select-btn" onclick="selectMentor('Henry King')">Select</button>
+        </div>
+
+    </div>
+
+    <script>
+        function selectMentor(mentorName) {
+            localStorage.setItem('selectedMentor', mentorName);
+            window.location.href = 'schedule.html';
+        }
+    </script>
+
+</body>
+
+</html>

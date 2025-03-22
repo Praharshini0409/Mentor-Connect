@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Meeting - MentorConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #add8e6;
+            /* Light blue background color */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            /* Dark text for better readability */
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            /* Increased font size */
+            margin-bottom: 20px;
+            color: #e74c3c;
+            /* Bright red color for heading */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            /* Added text shadow */
+        }
+        
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 25px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            /* Use flexbox for alignment */
+            flex-direction: column;
+            /* Stack label and input vertically */
+        }
+        
+        label {
+            margin-bottom: 8px;
+            color: #333;
+            /* Dark text for labels */
+            font-size: 1.1rem;
+            /* Increased font size */
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            /* Increased font size */
+            background-color: #f8f9fa;
+            /* Light background for inputs */
+            box-sizing: border-box;
+            /* Include padding and border in element's total width and height */
+        }
+        
+        .submit-btn {
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #ff5722;
+            /* Orange */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+            /* Increased font size */
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e64a19;
+            /* Darker orange on hover */
+        }
+        /* Media queries for responsiveness */
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .form-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Schedule Your Meeting</h1>
+
+    <div class="form-container">
+        <div class="form-group">
+            <label for="user-name">Your Name (First Name, Last Name):</label>
+            <input type="text" id="user-name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="user-email">Your Email:</label>
+            <input type="email" id="user-email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+        </div>
+        <div class="form-group">
+            <label for="user-dob">Date of Birth:</label>
+            <input type="date" id="user-dob" required>
+        </div>
+        <div class="form-group">
+            <label for="mentor-name">Select Mentor:</label>
+            <select id="mentor-name" required>
+                <option value="" disabled selected>Select a mentor</option>
+                <option value="John Doe">John Doe - AI Specialist</option>
+                <option value="Jane Smith">Jane Smith - Web Developer</option>
+                <option value="Alice Johnson">Alice Johnson - Data Scientist</option>
+                <option value="Michael Brown">Michael Brown - Machine Learning Expert</option>
+                <option value="Emma Davis">Emma Davis - Cloud Engineer</option>
+                <option value="Robert Wilson">Robert Wilson - Full-Stack Developer</option>
+                <option value="Olivia Thomas">Olivia Thomas - Cybersecurity Specialist</option>
+                <option value="William Harris">William Harris - Blockchain Developer</option>
+                <option value="Sophia Lee">Sophia Lee - DevOps Engineer</option>
+                <option value="James Clark">James Clark - UI/UX Designer</option>
+                <option value="Liam Walker">Liam Walker - Game Developer</option>
+                <option value="Mia Hall">Mia Hall - Frontend Developer</option>
+                <option value="Ethan Young">Ethan Young - Backend Developer</option>
+                <option value="Ava King">Ava King - Product Manager</option>
+                <option value="Noah Allen">Noah Allen - SEO Specialist</option>
+                <option value="Ella Scott">Ella Scott - Digital Marketing</option>
+                <option value="Benjamin Evans">Benjamin Evans - Mobile App Developer</option>
+                <option value="Grace Adams">Grace Adams - UI Designer</option>
+                <option value="Lucas Martin">Lucas Martin - IoT Engineer</option>
+                <option value="Charlotte Perez">Charlotte Perez - DevOps Engineer</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="meeting-time">Select Time Slot:</label>
+            <select id="meeting-time" required>
+                <option value="" disabled selected>Select a time</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="meeting-summary">Meeting Summary (max 100 characters):</label>
+            <input type="text" id="meeting-summary" maxlength="100" placeholder="Brief summary" required>
+        </div>
+        <button class="submit-btn" onclick="submitForm()">Schedule Meeting</button>
+    </div>
+
+    <script>
+        function submitForm() {
+            const userName = document.getElementById('user-name').value;
+            const userEmail = document.getElementById('user-email').value;
+            const userDob = document.getElementById('user-dob').value;
+            const mentorName = document.getElementById('mentor-name').value;
+            const meetingTime = document.getElementById('meeting-time').value;
+            const meetingSummary = document.getElementById('meeting-summary').value;
+
+            if (userName && userEmail && userDob && mentorName && meetingTime && meetingSummary) {
+                alert('Meeting scheduled successfully!');
+                // You can implement further logic here to save the meeting details
+            } else {
+                alert('Please fill in all fields!');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
